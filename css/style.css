@@ -4,18 +4,28 @@
     padding: 0;
 }
 
-.fl {
-    float: left;
+body {
+    background-color: #ddd;
 }
 
-.fr {
-    float: right;
+body::-webkit-scrollbar {  /*This fixes a nasty scrollbar problem!*/
+    display: none;
+}
+
+.fl {
+    float: left;
 }
 
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
 }
 
 header div {
@@ -36,34 +46,25 @@ header div {
 }
 
 .info-2 {
-    height: 42vh;
     background-color: royalblue;
     margin-bottom: 10px;
     padding: 2vh 0;
 }
 
-.content {
-    width: calc(20vw - 1vh);
-    height: 38vh;
+.common {
     background-color: lightblue;
-    margin-right: 1vh;
+    height: 38vh;
+
 }
+.content {
+    width: calc(20vw*0.8);          /*The 0.8 multipliers are to offset*/
+}                                   /*the 80% width of the container*/   
+
 
 .content-2 {
-    width: calc(60vw - 2vh);
-    height: 38vh;
-    background-color: lightblue;
-    margin: 0 1vh;
+    width: calc(58vw*0.8);   
+    margin: 0 .8vw;
 }
-
-.content-3 {
-    width: calc(20vw - 1vh);
-    height: 38vh;
-    background-color: lightblue;
-    margin-left: 1vh;
-}
-
-
 
 footer {
     height: calc(5vh - 10px);
