@@ -4,13 +4,14 @@
     padding: 0;
 }
 
-body {
-    background-color: #ddd;
-}
-
-body::-webkit-scrollbar {  /*This fixes a nasty scrollbar problem!*/
+body::-webkit-scrollbar {   /*This fixes a nasty scrollbar problem in Chrome*/
     display: none;
 }
+
+body {
+    background-color: #ddd;
+    scrollbar-width: none;     /* <-- Should fix Firefox issues as well!*/
+}                              /*     Just don't use IE or Edge, haha*/ 
 
 .fl {
     float: left;
